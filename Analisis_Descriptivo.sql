@@ -1,33 +1,40 @@
-/*An醠isis Descriptivo
-Distribuci髇 de G閚ero:
-	N鷐ero de participantes por g閚ero.
-	Proporci髇 de g閚ero en la muestra.
-Distribuci髇 de Edad:
-	Media, mediana, moda de la edad y dispersi髇 (desviaci髇 est醤dar, rango).
-	Distribuci髇 de la edad por grupos etarios,un histograma (por ejemplo, adolescentes, adultos j髒enes, adultos, adultos mayores).
-Altura y Peso:
-	Calcular la media, mediana y desviaci髇 est醤dar de la altura y el peso.
-	Generar gr醘icos de dispersi髇 para visualizar la relaci髇 entre altura y peso.
-蚽dice de Masa Corporal (IMC):
-	Calcular el IMC para cada participante utilizando la f髍mula: IMC = Peso (kg) / (Altura (m))^2.
-	Clasificar a los participantes en categor韆s de IMC (Bajo Peso, Normal, Sobrepeso, Obesidad I, Obesidad II, Obesidad III).*/
+/*An谩lisis Descriptivo
 
---Analisis Descriptivo
+Distribuci贸n de Edad:
+	Media, mediana, moda de la edad y dispersi贸n (desviaci贸n est谩ndar, rango).
+	Distribuci贸n de la edad por grupos etarios,un histograma (por ejemplo, adolescentes, adultos j贸venes, adultos, adultos mayores).
+Altura y Peso:
+	Calcular la media, mediana y desviaci贸n est谩ndar de la altura y el peso.
+	Generar gr谩ficos de dispersi贸n para visualizar la relaci贸n entre altura y peso.
+脥ndice de Masa Corporal (IMC):
+	Calcular el IMC para cada participante utilizando la f贸rmula: IMC = Peso (kg) / (Altura (m))^2.
+	Clasificar a los participantes en categor铆as de IMC (Bajo Peso, Normal, Sobrepeso, Obesidad I, Obesidad II, Obesidad III).*/
+
+Analisis Descriptivo
 --Tabla Completa
 select*from ObesityDataSet
 
---Distribuci髇 de G閚ero y Proporci髇:
---	N鷐ero de participantes por g閚ero
+Distribuci贸n de G茅nero y Proporci贸n:
+--N煤mero de participantes por g茅nero
 select	count(*) AS Cantidad, 
 		Genero,
 		(COUNT(*) * 1.0 / (SELECT COUNT(*) FROM ObesityDataSet)) AS Proporcion --cant. entre el total
 FROM ObesityDataSet
 GROUP BY Genero
 
--- Distribuci髇 de Edad:
-	Media, mediana, moda de la edad y dispersi髇 (desviaci髇 est醤dar, rango).
-	Distribuci髇 de la edad por grupos etarios,un histograma (por ejemplo, adolescentes, adultos j髒enes, adultos, adultos mayores).
-
+Distribuci贸n de Edad:
+	Media, mediana, moda de la edad y dispersi贸n (desviaci贸n est谩ndar, rango).
+	Distribuci贸n de la edad por grupos etarios,un histograma (por ejemplo, adolescentes, adultos j贸venes, adultos, adultos mayores).
+	
+--Media(Edad)
+SELECT AVG(Edad) as Promedio
+FROM ObesityDataSet
+--Moda(Edad)
+SELECT	TOP(1) Edad,
+	count(*) as Frecuencia
+FROM	ObesityDataSet
+Group By Edad
+Order By Edad Desc
 
 
 
