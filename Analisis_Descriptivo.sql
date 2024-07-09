@@ -1,5 +1,3 @@
-
-
 Analisis Descriptivo
 --Tabla Completa
 select*from ObesityDataSet
