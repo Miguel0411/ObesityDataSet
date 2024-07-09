@@ -1,14 +1,4 @@
-/*Análisis Descriptivo
 
-Distribución de Edad:
-	Media, mediana, moda de la edad y dispersión (desviación estándar, rango).
-	Distribución de la edad por grupos etarios,un histograma (por ejemplo, adolescentes, adultos jóvenes, adultos, adultos mayores).
-Altura y Peso:
-	Calcular la media, mediana y desviación estándar de la altura y el peso.
-	Generar gráficos de dispersión para visualizar la relación entre altura y peso.
-Índice de Masa Corporal (IMC):
-	Calcular el IMC para cada participante utilizando la fórmula: IMC = Peso (kg) / (Altura (m))^2.
-	Clasificar a los participantes en categorías de IMC (Bajo Peso, Normal, Sobrepeso, Obesidad I, Obesidad II, Obesidad III).*/
 
 Analisis Descriptivo
 --Tabla Completa
@@ -106,7 +96,16 @@ GROUP BY
         WHEN FLOOR(Edad) >= 60 THEN 'Persona Mayor (60 años o más)'
     END;
 
-
+/*
+Distribución de Edad:
+	Media, mediana, moda de la edad y dispersión (desviación estándar, rango).
+	Distribución de la edad por grupos etarios,un histograma (por ejemplo, adolescentes, adultos jóvenes, adultos, adultos mayores).
+Altura y Peso:
+	Calcular la media, mediana y desviación estándar de la altura y el peso.
+	Generar gráficos de dispersión para visualizar la relación entre altura y peso.
+Índice de Masa Corporal (IMC):
+	Calcular el IMC para cada participante utilizando la fórmula: IMC = Peso (kg) / (Altura (m))^2.
+	Clasificar a los participantes en categorías de IMC (Bajo Peso, Normal, Sobrepeso, Obesidad I, Obesidad II, Obesidad III).*/
 
 
 
